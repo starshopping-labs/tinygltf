@@ -1810,6 +1810,7 @@ static int tg3__parse_audio_emitter(tg3__parse_ctx *ctx, const tg3json_value *o,
                 size_t _i; \
                 Type *_items = (Type *)tg3__arena_alloc((ctx)->arena, _count * sizeof(Type)); \
                 if (_items) { \
+                    TINYGLTF3_MEMSET(_items, 0, _count * sizeof(Type)); \
                     for (_i = 0; _i < _count; ++_i) { \
                         const tg3json_value *_it = tg3json_array_get(_arr, _i); \
                         if (!tg3__json_is_object(_it)) { \
@@ -1834,6 +1835,7 @@ static int tg3__parse_audio_emitter(tg3__parse_ctx *ctx, const tg3json_value *o,
                 size_t _i; \
                 Type *_items = (Type *)tg3__arena_alloc((ctx)->arena, _count * sizeof(Type)); \
                 if (_items) { \
+                    TINYGLTF3_MEMSET(_items, 0, _count * sizeof(Type)); \
                     for (_i = 0; _i < _count; ++_i) { \
                         const tg3json_value *_it = tg3json_array_get(_arr, _i); \
                         if (!tg3__json_is_object(_it)) { \
